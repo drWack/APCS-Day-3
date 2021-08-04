@@ -6,11 +6,34 @@ class Main {
     String[] words = {"aint ", "gon", "happen","white","purple"};
     
     //function that we give base and power, then computes b^p recursively
-    power(2,100);
+      System.out.println(sortaSum(10,19));
   
 
   }
-  
+  public static int sortaSum(int a, int b){
+    int sum = a + b;
+    if((sum >=10) && (sum <=19)){
+      return 20;
+    }
+    return sum;
+  }
+
+
+  public static String noX(String str){
+    //abaxcx
+  if(str.length() ==0 ){
+    return str;
+  }
+    System.out.println(str);
+
+    if(str.charAt(0)=='x'){
+      return noX(str.substring(1));
+    }
+    else{
+      return str.charAt(0) + noX(str.substring(1));
+    }
+
+  }
   
   static int fibonacci(int n){
     // 1 1 2 3 5 8 13 21 34 55 
